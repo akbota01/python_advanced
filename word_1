@@ -15,15 +15,16 @@ while not game_over:
         for i in range(len(the_word)):
             if the_word[i] == user_guess:
                 board[i] = user_guess
-            else:
-                print("The word does not have such letter!")
                 break
+        if the_word[i] != user_guess:
+            print("The word does not have such letter!")
     else:
         if user_guess == the_word:
             print("Correct! Congratulations!")
             game_over = True
         else:
             print("Incorrect, think again.")
+
 
 # if the letter is incorrect, show some message
 
